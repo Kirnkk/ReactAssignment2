@@ -6,7 +6,7 @@ export const TodoReducer =(state=todo,action)=>{
             return[...state,action.payload];
         }
         case "REMOVE":{
-            return state.filter((i)=>i.index!==action.index);
+            return state.filter((i,index)=>index!==action.index);
         }
         default:return state;
 
